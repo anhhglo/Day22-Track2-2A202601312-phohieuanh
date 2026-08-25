@@ -26,5 +26,7 @@ env/
 # macOS
 .DS_Store
 
-# Lab outputs (không commit, chỉ nộp evidence/)
-data/ragas_report.json
+# Lab outputs
+# LƯU Ý: rubric.md (checklist nộp bài) yêu cầu data/ragas_report.json PHẢI có trong repo,
+# nên file này được commit thay vì ignore như bản .gitignore gốc của đề.
+# data/ragas_report.json
