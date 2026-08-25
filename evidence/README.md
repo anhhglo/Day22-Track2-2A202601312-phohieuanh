@@ -26,9 +26,12 @@
 | `04_pii_demo_log.txt` | 6 test case PII detection & redaction |
 | `04_json_demo_log.txt` | 5 test case JSON repair |
 
-**Prompt Hub URLs:**
-- V1 — https://apac.smith.langchain.com/prompts/phohieuanh-rag-prompt-v1
-- V2 — https://apac.smith.langchain.com/prompts/phohieuanh-rag-prompt-v2
+**Prompt Hub URLs** (đã chuyển sang public, handle `phohieuanh`):
+- V1 — https://apac.smith.langchain.com/hub/phohieuanh/phohieuanh-rag-prompt-v1
+- V2 — https://apac.smith.langchain.com/hub/phohieuanh/phohieuanh-rag-prompt-v2
+
+> Cả 2 prompt truy cập được không cần đăng nhập, nhưng **chỉ trên host `apac.`** —
+> host mặc định `smith.langchain.com` trả 404 vì workspace nằm ở region APAC.
 
 ---
 
