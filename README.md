@@ -4,6 +4,8 @@
 
 ## 📌 Bài nộp
 
+> **Trang nộp bài đầy đủ: [SUBMISSION.md](SUBMISSION.md)** — gồm mọi đường dẫn, kết quả và bản đồ tiêu chí chấm điểm → bằng chứng.
+
 | Mục | Đường dẫn |
 |---|---|
 | **GitHub repository** | https://github.com/anhhglo/Day22-Track2-2A202601312-phohieuanh |
