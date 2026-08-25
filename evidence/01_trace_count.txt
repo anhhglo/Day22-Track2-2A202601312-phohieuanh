@@ -1,12 +1,12 @@
 XAC MINH SO LUONG TRACES TREN LANGSMITH
 =======================================================
-Thoi diem kiem tra : 2026-08-25T13:28:26
+Thoi diem kiem tra : 2026-08-25T14:03:11
 Project            : day22-2A202601312-phohieuanh
 Endpoint           : https://apac.api.smith.langchain.com
 
-Tong so trace goc (root runs): 200
+Tong so trace goc (root runs): 300
 
-  ab-rag-query      150 traces   (Buoc 2)
-  rag-query          50 traces   (Buoc 1)
+  ab-rag-query      200 traces   (Buoc 2)
+  rag-query         100 traces   (Buoc 1)
 
 Yeu cau rubric: >= 50 traces cho Buoc 1, >= 100 traces tong cong  ->  DAT.

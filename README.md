@@ -13,7 +13,7 @@
 | **Prompt Hub (public)** | [phohieuanh/phohieuanh-rag-prompt-v1](https://apac.smith.langchain.com/hub/phohieuanh/phohieuanh-rag-prompt-v1) · [phohieuanh/phohieuanh-rag-prompt-v2](https://apac.smith.langchain.com/hub/phohieuanh/phohieuanh-rag-prompt-v2) |
 | **Sinh viên** | 2A202601312 — Phó Hiếu Anh |
 
-**Kết quả:** 200 traces trên LangSmith (50 Bước 1 + 150 Bước 2) · RAGAS faithfulness **V1 = 0.9225 / V2 = 0.8669** (đạt mục tiêu ≥ 0.8) · toàn bộ bằng chứng trong [`evidence/`](evidence/README.md).
+**Kết quả:** 300 traces trên LangSmith (100 Bước 1 + 200 Bước 2) · RAGAS faithfulness **V1 = 0.9225 / V2 = 0.8669** (đạt mục tiêu ≥ 0.8) · toàn bộ bằng chứng trong [`evidence/`](evidence/README.md).
 
 ---
 

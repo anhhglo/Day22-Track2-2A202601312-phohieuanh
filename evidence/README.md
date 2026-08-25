@@ -15,9 +15,9 @@
 
 | Tệp | Nội dung |
 |---|---|
-| `01_langsmith_traces.png` | LangSmith dashboard — 200 traces (50 `rag-query` + 150 `ab-rag-query`) |
+| `01_langsmith_traces.png` | LangSmith dashboard — traces của Bước 1 và Bước 2 (ảnh chụp khi project có 200 traces) |
 | `01_rag_pipeline_log.txt` | Console log Bước 1 — 50/50 câu hỏi, 0 lỗi |
-| `01_trace_count.txt` | Kết quả đếm traces qua LangSmith API — 200 root runs (50 + 150) |
+| `01_trace_count.txt` | Kết quả đếm traces qua LangSmith API — 300 root runs (100 + 200) |
 | `02_prompt_hub.png` | Prompt Hub — 2 prompt `phohieuanh-rag-prompt-v1` và `-v2` |
 | `02_ab_routing_log.txt` | Console log Bước 2 — 50 câu có nhãn v1/v2, phân bổ 19/31 |
 | `03_ragas_scores.png` | Bảng so sánh RAGAS V1 vs V2 trên terminal |

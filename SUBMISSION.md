@@ -43,7 +43,7 @@ xem [`evidence/01_langsmith_traces.png`](evidence/01_langsmith_traces.png) (ản
 
 | Hạng mục | Kết quả |
 |---|---|
-| Traces trên LangSmith | **200** root runs — 50 `rag-query` (Bước 1) + 150 `ab-rag-query` (Bước 2) |
+| Traces trên LangSmith | **300** root runs — 100 `rag-query` (Bước 1) + 200 `ab-rag-query` (Bước 2) |
 | Prompt versions trên Hub | 2 (`phohieuanh-rag-prompt-v1`, `phohieuanh-rag-prompt-v2`) |
 | A/B routing | Tất định qua MD5(`request_id`) — phân bổ 19 câu V1 / 31 câu V2 |
 | RAGAS faithfulness | **V1 = 0.9225** · V2 = 0.8669 → đạt mục tiêu ≥ 0.8 |
