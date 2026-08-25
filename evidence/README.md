@@ -1,5 +1,6 @@
 # Evidence — Day 22: LangSmith + Prompt Versioning
 
+**GitHub repository:** https://github.com/anhhglo/Day22-Track2-2A202601312-phohieuanh
 **Sinh viên:** 2A202601312 — Phó Hiếu Anh
 **LangSmith project:** `day22-2A202601312-phohieuanh` (region **APAC**)
 **Provider:** OpenAI — `gpt-4o-mini` (LLM) + `text-embedding-3-small` (embeddings)

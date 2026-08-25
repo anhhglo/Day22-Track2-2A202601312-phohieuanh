@@ -1,5 +1,20 @@
 # Chào mừng các bạn đến với Day 22: LangSmith + Prompt Versioning
 
+---
+
+## 📌 Bài nộp
+
+| Mục | Đường dẫn |
+|---|---|
+| **GitHub repository** | https://github.com/anhhglo/Day22-Track2-2A202601312-phohieuanh |
+| **LangSmith project** | `day22-2A202601312-phohieuanh` — https://apac.smith.langchain.com (region APAC) |
+| **Prompt Hub** | `phohieuanh-rag-prompt-v1` · `phohieuanh-rag-prompt-v2` |
+| **Sinh viên** | 2A202601312 — Phó Hiếu Anh |
+
+**Kết quả:** 200 traces trên LangSmith (50 Bước 1 + 150 Bước 2) · RAGAS faithfulness **V1 = 0.9225 / V2 = 0.8669** (đạt mục tiêu ≥ 0.8) · toàn bộ bằng chứng trong [`evidence/`](evidence/README.md).
+
+---
+
 ## Tổng quan
 
 Trong lab này, bạn sẽ xây dựng một hệ thống hỏi đáp hoàn chỉnh tích hợp nhiều công nghệ AI hiện đại:
