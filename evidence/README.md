@@ -4,6 +4,10 @@
 **LangSmith project:** `day22-2A202601312-phohieuanh` (region **APAC**)
 **Provider:** OpenAI — `gpt-4o-mini` (LLM) + `text-embedding-3-small` (embeddings)
 
+> Ghi chú: cột Latency trong ảnh `01_langsmith_traces.png` hiển thị giá trị âm là do đồng hồ
+> hệ thống WSL2 trên máy chạy lab bị nhảy thời gian, không phải lỗi của pipeline. Nội dung
+> input/output/token/cost của mọi trace vẫn đầy đủ và chính xác.
+
 ---
 
 ## Danh sách bằng chứng
@@ -12,6 +16,7 @@
 |---|---|
 | `01_langsmith_traces.png` | LangSmith dashboard — 200 traces (50 `rag-query` + 150 `ab-rag-query`) |
 | `01_rag_pipeline_log.txt` | Console log Bước 1 — 50/50 câu hỏi, 0 lỗi |
+| `01_trace_count.txt` | Kết quả đếm traces qua LangSmith API — 200 root runs (50 + 150) |
 | `02_prompt_hub.png` | Prompt Hub — 2 prompt `phohieuanh-rag-prompt-v1` và `-v2` |
 | `02_ab_routing_log.txt` | Console log Bước 2 — 50 câu có nhãn v1/v2, phân bổ 19/31 |
 | `03_ragas_scores.png` | Bảng so sánh RAGAS V1 vs V2 trên terminal |
