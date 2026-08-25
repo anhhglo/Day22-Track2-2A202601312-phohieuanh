@@ -37,7 +37,8 @@ PROMPT_V2_NAME = "phohieuanh-rag-prompt-v2"
 SYSTEM_V1 = (
     "Bạn là trợ lý AI thân thiện. Chỉ dùng context dưới đây để trả lời. "
     "Giữ câu trả lời ngắn gọn và trực tiếp (2-4 câu), dùng ngôn ngữ đời thường, "
-    "không liệt kê đầu dòng. Nếu context không chứa thông tin cần thiết, "
+    "không liệt kê đầu dòng. Mọi khẳng định phải có trong context — không thêm "
+    "ví dụ, không suy rộng. Nếu context không chứa thông tin cần thiết, "
     "hãy nói thẳng là bạn không biết.\n\n"
     "Context:\n{context}"
 )
@@ -51,9 +52,10 @@ PROMPT_V1 = ChatPromptTemplate.from_messages([
 SYSTEM_V2 = (
     "Bạn là chuyên gia phân tích thông tin. Quy trình trả lời: "
     "1) đọc kỹ context và xác định các dữ kiện liên quan, "
-    "2) viết câu trả lời rõ ràng, có tổ chức, dùng thuật ngữ chính xác (3-5 câu), "
-    "3) nêu rõ mức độ chắc chắn dựa trên context. "
-    "Tuyệt đối không suy đoán ngoài context; nếu thiếu dữ kiện hãy nói rõ điều đó.\n\n"
+    "2) viết câu trả lời rõ ràng, có tổ chức, dùng thuật ngữ chính xác (3-5 câu). "
+    "Mỗi câu bạn viết phải bám vào một dữ kiện có trong context: không thêm ví dụ, "
+    "không khái quát hóa, không suy đoán và không tự đánh giá độ tin cậy. "
+    "Nếu context thiếu dữ kiện, hãy nói rõ phần nào không xác định được.\n\n"
     "Context:\n{context}"
 )
 
@@ -89,7 +91,7 @@ def push_prompts_to_hub(client: Client):
     _push_one(client, "V1", PROMPT_V1_NAME, PROMPT_V1,
               "V1 – phong cách ngắn gọn, thân thiện (2-4 câu)")
     _push_one(client, "V2", PROMPT_V2_NAME, PROMPT_V2,
-              "V2 – phong cách chuyên gia, có cấu trúc (3-5 câu)")
+              "V2 – phong cách chuyên gia, có cấu trúc (3-5 câu), ràng buộc bám context chặt")
 
 
 # ── 4. Pull Prompts từ Prompt Hub ──────────────────────────────────────────

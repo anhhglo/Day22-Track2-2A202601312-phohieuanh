@@ -40,7 +40,8 @@ from qa_pairs import QA_PAIRS
 SYSTEM_V1 = (
     "Bạn là trợ lý AI thân thiện. Chỉ dùng context dưới đây để trả lời. "
     "Giữ câu trả lời ngắn gọn và trực tiếp (2-4 câu), dùng ngôn ngữ đời thường, "
-    "không liệt kê đầu dòng. Nếu context không chứa thông tin cần thiết, "
+    "không liệt kê đầu dòng. Mọi khẳng định phải có trong context — không thêm "
+    "ví dụ, không suy rộng. Nếu context không chứa thông tin cần thiết, "
     "hãy nói thẳng là bạn không biết.\n\n"
     "Context:\n{context}"
 )
@@ -52,9 +53,10 @@ PROMPT_V1 = ChatPromptTemplate.from_messages([
 SYSTEM_V2 = (
     "Bạn là chuyên gia phân tích thông tin. Quy trình trả lời: "
     "1) đọc kỹ context và xác định các dữ kiện liên quan, "
-    "2) viết câu trả lời rõ ràng, có tổ chức, dùng thuật ngữ chính xác (3-5 câu), "
-    "3) nêu rõ mức độ chắc chắn dựa trên context. "
-    "Tuyệt đối không suy đoán ngoài context; nếu thiếu dữ kiện hãy nói rõ điều đó.\n\n"
+    "2) viết câu trả lời rõ ràng, có tổ chức, dùng thuật ngữ chính xác (3-5 câu). "
+    "Mỗi câu bạn viết phải bám vào một dữ kiện có trong context: không thêm ví dụ, "
+    "không khái quát hóa, không suy đoán và không tự đánh giá độ tin cậy. "
+    "Nếu context thiếu dữ kiện, hãy nói rõ phần nào không xác định được.\n\n"
     "Context:\n{context}"
 )
 PROMPT_V2 = ChatPromptTemplate.from_messages([
@@ -249,21 +251,24 @@ if __name__ == "__main__":
 # ── PHÂN TÍCH KẾT QUẢ (lần chạy ngày 25/08/2026, gpt-4o-mini) ─────────────
 #
 #   Metric              V1 (ngắn gọn)   V2 (có cấu trúc)
-#   faithfulness             0.9225           0.8669   ← V1 thắng
-#   answer_relevancy         0.9160           0.9016   ← V1 thắng
+#   faithfulness             0.9622           0.9525   ← cả hai >= 0.9
+#   answer_relevancy         0.9064           0.9011
 #   context_recall           1.0000           1.0000     hòa
-#   context_precision        0.9450           0.9450     hòa
+#   context_precision        0.9417           0.9483
 #
-# • 2 chỉ số retrieval hòa nhau là đúng như thiết kế: cùng FAISS index, cùng
-#   retriever k=3 → system prompt không tác động tới khâu truy xuất.
+# • context_recall/precision đo khâu truy xuất: cùng FAISS index, cùng retriever k=3
+#   → system prompt (tác động sau khi retrieve) không làm chúng đổi. Chênh lệch 0.0066
+#   ở context_precision là nhiễu của LLM giám khảo, không phải khác biệt thật.
 #
-# • V1 thắng faithfulness vì prompt của nó chỉ yêu cầu 2-4 câu ngắn gọn, mô hình
-#   gần như diễn đạt lại context. V2 yêu cầu "viết có tổ chức 3-5 câu" và "nêu rõ
-#   mức độ chắc chắn" → sinh thêm câu chuyển ý, câu khái quát hóa và câu tự đánh giá
-#   độ tin cậy. Các mệnh đề thêm vào này không có trong context nên bị RAGAS tính là
-#   không được chứng minh. V2 bị phạt đúng vì cái làm nó "chuyên nghiệp" hơn.
+# • Bản SYSTEM_V2 ĐẦU TIÊN chỉ đạt faithfulness 0.8669 vì có lệnh "nêu rõ mức độ chắc
+#   chắn" — lệnh này buộc mô hình sinh câu tự đánh giá, thứ không có trong context, nên
+#   bị RAGAS tính là mệnh đề không được chứng minh.
 #
-# • Chênh lệch answer_relevancy nhỏ (0.0144) vì cả 2 prompt đều buộc bám context;
-#   phần dư thừa của V2 làm loãng nhẹ độ liên quan chứ không lạc đề.
+# • Sau khi thay lệnh đó bằng ràng buộc bám nguồn tường minh (giữ nguyên giọng chuyên gia
+#   và cấu trúc 3-5 câu để V2 vẫn khác V1 về phong cách): V2 tăng +0.0856 lên 0.9525.
+#   Ràng buộc tương tự thêm vào V1 nâng V1 +0.0397 lên 0.9622.
+#
+# • V1 vẫn nhỉnh hơn 0.0097 do viết ngắn hơn (2-4 câu so với 3-5 câu): mỗi câu thêm vào
+#   là một mệnh đề nữa phải được context chứng minh.
 #
 # Xem phân tích đầy đủ tại evidence/README.md

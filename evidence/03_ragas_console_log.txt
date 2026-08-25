@@ -111,69 +111,69 @@
 
 📐 Đang đánh giá RAGAS cho prompt v1 ... (vui lòng chờ ~5-10 phút)
 Evaluating:   0%|          | 0/200 [00:00<?, ?it/s]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:   0%|          | 1/200 [09:31<31:35:57, 571.64s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   0%|          | 1/200 [00:09<31:31,  9.51s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   1%|          | 2/200 [00:30<53:48, 16.31s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   4%|▍         | 9/200 [00:34<09:03,  2.84s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   5%|▌         | 10/200 [10:14<4:40:21, 88.53s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   9%|▉         | 18/200 [10:29<1:43:14, 34.03s/it]Evaluating:  10%|█         | 20/200 [10:33<1:24:17, 28.10s/it]Evaluating:  11%|█         | 22/200 [10:38<1:07:36, 22.79s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  20%|█▉        | 39/200 [11:19<22:01,  8.21s/it]  LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  26%|██▋       | 53/200 [11:49<13:19,  5.44s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  28%|██▊       | 57/200 [12:14<13:17,  5.58s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  38%|███▊      | 77/200 [12:55<07:36,  3.71s/it]Evaluating:  39%|███▉      | 78/200 [13:04<07:57,  3.91s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  41%|████      | 82/200 [13:13<07:03,  3.59s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  42%|████▎     | 85/200 [13:17<06:11,  3.23s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  43%|████▎     | 86/200 [13:30<07:28,  3.93s/it]Evaluating:  46%|████▌     | 91/200 [13:33<05:06,  2.81s/it]Evaluating:  46%|████▌     | 92/200 [13:34<04:46,  2.65s/it]Evaluating:  46%|████▋     | 93/200 [13:35<04:27,  2.50s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  47%|████▋     | 94/200 [13:49<07:08,  4.04s/it]Evaluating:  48%|████▊     | 96/200 [13:53<06:11,  3.57s/it]Evaluating:  48%|████▊     | 97/200 [14:01<07:10,  4.18s/it]Evaluating:  52%|█████▏    | 103/200 [14:03<03:08,  1.94s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  52%|█████▏    | 104/200 [14:07<03:30,  2.19s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  54%|█████▍    | 108/200 [14:30<05:37,  3.67s/it]Evaluating:  58%|█████▊    | 116/200 [14:31<02:27,  1.76s/it]Evaluating:  58%|█████▊    | 117/200 [14:32<02:22,  1.72s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  59%|█████▉    | 118/200 [14:43<03:45,  2.75s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  64%|██████▎   | 127/200 [15:02<02:50,  2.33s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  64%|██████▍   | 129/200 [15:10<03:05,  2.62s/it]Evaluating:  66%|██████▋   | 133/200 [15:11<02:05,  1.88s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  67%|██████▋   | 134/200 [15:14<02:09,  1.96s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  83%|████████▎ | 166/200 [16:40<01:26,  2.56s/it]Evaluating:  85%|████████▌ | 170/200 [16:40<01:07,  2.26s/it]Evaluating:  86%|████████▌ | 171/200 [16:44<01:06,  2.30s/it]Evaluating:  86%|████████▋ | 173/200 [16:48<01:02,  2.30s/it]Evaluating:  88%|████████▊ | 176/200 [16:50<00:47,  1.97s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  91%|█████████ | 182/200 [17:04<00:38,  2.12s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  26%|██▋       | 53/200 [11:46<24:53, 10.16s/it]   LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  35%|███▌      | 70/200 [12:41<17:16,  7.98s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  51%|█████     | 102/200 [14:02<08:55,  5.47s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  68%|██████▊   | 136/200 [15:22<04:28,  4.19s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  92%|█████████▏| 183/200 [17:19<00:58,  3.43s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating: 100%|██████████| 200/200 [08:55<00:00,  2.68s/it]
+Evaluating: 100%|██████████| 200/200 [08:21<00:00,  2.51s/it]
 
 📊 Kết quả RAGAS — Prompt V1:
-  faithfulness                  : 0.9225 ⭐
-  answer_relevancy              : 0.9160
+  faithfulness                  : 0.9622 ⭐
+  answer_relevancy              : 0.9064
   context_recall                : 1.0000
-  context_precision             : 0.9450
+  context_precision             : 0.9417
 
 📐 Đang đánh giá RAGAS cho prompt v2 ... (vui lòng chờ ~5-10 phút)
 Evaluating:   0%|          | 0/200 [00:00<?, ?it/s]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:   0%|          | 1/200 [00:04<14:00,  4.23s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   0%|          | 1/200 [00:04<13:44,  4.15s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   1%|          | 2/200 [09:54<19:12:18, 349.18s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   4%|▍         | 8/200 [09:57<3:06:18, 58.22s/it]  LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:   1%|          | 2/200 [00:23<42:41, 12.94s/it]Evaluating:   4%|▍         | 9/200 [00:25<06:47,  2.13s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:   5%|▌         | 10/200 [00:36<10:48,  3.41s/it]Evaluating:   6%|▋         | 13/200 [00:42<08:55,  2.86s/it]Evaluating:   8%|▊         | 17/200 [00:47<06:46,  2.22s/it]Evaluating:  10%|▉         | 19/200 [00:49<05:45,  1.91s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  10%|█         | 21/200 [00:53<05:55,  1.99s/it]Evaluating:  11%|█         | 22/200 [00:56<06:09,  2.08s/it]Evaluating:  12%|█▏        | 23/200 [00:58<06:06,  2.07s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  12%|█▏        | 24/200 [01:04<08:42,  2.97s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  14%|█▍        | 28/200 [01:07<05:08,  1.79s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  14%|█▍        | 29/200 [10:44<4:28:33, 94.23s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  16%|█▌        | 32/200 [10:49<2:38:04, 56.45s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  25%|██▌       | 50/200 [11:29<35:43, 14.29s/it]  LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  28%|██▊       | 57/200 [11:39<24:48, 10.41s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  32%|███▏      | 63/200 [11:59<19:24,  8.50s/it]Evaluating:  34%|███▎      | 67/200 [12:04<15:33,  7.02s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  24%|██▎       | 47/200 [11:39<22:52,  8.97s/it] LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
@@ -182,35 +182,35 @@ LLM returned 1 generations instead of requested 3. Proceeding with 1 generations
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  50%|█████     | 100/200 [13:30<07:41,  4.61s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  55%|█████▌    | 110/200 [13:49<06:20,  4.22s/it]Evaluating:  56%|█████▌    | 112/200 [13:50<05:58,  4.07s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  56%|█████▋    | 113/200 [13:54<05:53,  4.07s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  60%|██████    | 121/200 [14:15<04:53,  3.72s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  70%|███████   | 141/200 [14:57<02:55,  2.98s/it]Evaluating:  71%|███████   | 142/200 [14:58<02:49,  2.93s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  72%|███████▏  | 143/200 [15:03<02:51,  3.02s/it]Evaluating:  74%|███████▎  | 147/200 [15:15<02:38,  2.98s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  74%|███████▍  | 149/200 [15:22<02:37,  3.08s/it]Evaluating:  76%|███████▋  | 153/200 [15:29<02:07,  2.72s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
 LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
-Evaluating:  95%|█████████▌| 190/200 [16:35<00:26,  2.68s/it]Evaluating: 100%|██████████| 200/200 [07:18<00:00,  2.19s/it]
+Evaluating:  92%|█████████▏| 184/200 [16:36<00:36,  2.29s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  92%|█████████▎| 185/200 [16:40<00:35,  2.35s/it]Evaluating: 100%|██████████| 200/200 [07:38<00:00,  2.29s/it]
 
 📊 Kết quả RAGAS — Prompt V2:
-  faithfulness                  : 0.8669 ⭐
-  answer_relevancy              : 0.9016
+  faithfulness                  : 0.9525 ⭐
+  answer_relevancy              : 0.9011
   context_recall                : 1.0000
-  context_precision             : 0.9450
+  context_precision             : 0.9483
 
 =================================================================
   Metric                                V1        V2  Winner
 =================================================================
-  faithfulness                      0.9225    0.8669  ← V1
-  answer_relevancy                  0.9160    0.9016  ← V1
+  faithfulness                      0.9622    0.9525  ← V1
+  answer_relevancy                  0.9064    0.9011  ← V1
   context_recall                    1.0000    1.0000  ← V2
-  context_precision                 0.9450    0.9450  ← V1
+  context_precision                 0.9417    0.9483  ← V2
 
-✅ Đạt mục tiêu: faithfulness = 0.9225 ≥ 0.8
+✅ Đạt mục tiêu: faithfulness = 0.9622 ≥ 0.8
 💾 Đã lưu báo cáo vào /home/anh2/VinUniCo/Day22-Track2-2A202601312-phohieuanh/data/ragas_report.json

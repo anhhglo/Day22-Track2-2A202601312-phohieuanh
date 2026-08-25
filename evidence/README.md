@@ -44,19 +44,40 @@
 
 | Chỉ số | V1 (ngắn gọn) | V2 (có cấu trúc) | Chênh lệch |
 |---|---|---|---|
-| faithfulness | **0.9225** | 0.8669 | +0.0556 cho V1 |
-| answer_relevancy | **0.9160** | 0.9016 | +0.0144 cho V1 |
+| faithfulness | **0.9622** | 0.9525 | +0.0097 cho V1 |
+| answer_relevancy | **0.9064** | 0.9011 | +0.0053 cho V1 |
 | context_recall | 1.0000 | 1.0000 | bằng nhau |
-| context_precision | 0.9450 | 0.9450 | bằng nhau |
+| context_precision | 0.9417 | **0.9483** | +0.0066 cho V2 |
 
-Cả 2 phiên bản đều vượt ngưỡng faithfulness ≥ 0.8. **V1 thắng ở 2/4 chỉ số**, 2 chỉ số còn lại hòa.
+**Cả 2 phiên bản đều đạt faithfulness ≥ 0.9** (vượt ngưỡng bắt buộc 0.8 và đạt mốc điểm thưởng).
 
-## Phân tích: vì sao V1 cao điểm hơn?
+## Phân tích: prompt tác động tới chỉ số nào?
 
-**Hai chỉ số retrieval hòa nhau là điều được dự đoán trước.** `context_recall` và `context_precision` chỉ đo chất lượng của khâu truy xuất — cùng một FAISS index, cùng retriever `k=3`, cùng 50 câu hỏi. System prompt chỉ tác động tới bước sinh câu trả lời, nằm *sau* khâu retrieve, nên không thể làm thay đổi 2 chỉ số này. Kết quả giống hệt nhau tới 9 chữ số thập phân xác nhận pipeline hoạt động đúng như thiết kế.
+**Chỉ faithfulness và answer_relevancy chịu tác động của system prompt.** Hai chỉ số còn lại đo
+khâu truy xuất — cùng FAISS index, cùng retriever `k=3`, cùng 50 câu hỏi — nên prompt (chỉ tác động
+ở bước sinh câu trả lời, *sau* khi retrieve) không thể làm chúng đổi. `context_recall` giữ đúng
+1.0000 ở cả hai. Riêng `context_precision` lệch 0.0066 dù về lý thuyết phải bằng nhau: đây là nhiễu
+của LLM đóng vai giám khảo (RAGAS chấm chỉ số này bằng LLM, `temperature=0` không đảm bảo tất định
+tuyệt đối qua API), không phải khác biệt thật giữa 2 prompt.
 
-**V1 thắng faithfulness (0.9225 vs 0.8669) vì prompt của nó ít khuyến khích mô hình nói thêm.** Faithfulness đo tỉ lệ mệnh đề trong câu trả lời được context chứng minh. V1 yêu cầu "ngắn gọn, trực tiếp, 2-4 câu" → mô hình gần như chỉ diễn đạt lại nội dung đã retrieve. V2 lại yêu cầu "viết câu trả lời có tổ chức 3-5 câu" và "nêu rõ mức độ chắc chắn" — hai chỉ thị này đẩy mô hình sinh thêm câu chuyển ý, câu khái quát hóa và câu tự đánh giá độ tin cậy. Những mệnh đề thêm vào đó không có trong 3 đoạn context, nên RAGAS đếm chúng là không được chứng minh và trừ điểm. Nói cách khác, V2 bị phạt đúng vì cái làm nó "chuyên nghiệp" hơn.
+**Lần chạy đầu tiên V2 chỉ đạt faithfulness 0.8669, thấp hơn V1 (0.9225) tới 0.0556.** Nguyên nhân
+nằm ở hai chỉ thị trong `SYSTEM_V2` bản đầu: *"viết câu trả lời có tổ chức 3-5 câu"* và *"nêu rõ mức
+độ chắc chắn dựa trên context"*. Faithfulness đo tỉ lệ mệnh đề trong câu trả lời được context chứng
+minh — mà lệnh "nêu mức độ chắc chắn" buộc mô hình sinh ra câu tự đánh giá (*"Thông tin này có độ
+tin cậy cao"*), thứ không hề tồn tại trong 3 đoạn context. Yêu cầu viết dài hơn cũng kéo theo câu
+chuyển ý và câu khái quát hóa không có nguồn. V2 bị phạt đúng vì cái làm nó "chuyên nghiệp" hơn.
 
-**Chênh lệch answer_relevancy nhỏ hơn nhiều (0.0144)** vì chỉ số này đo mức độ câu trả lời bám sát câu hỏi, mà cả 2 prompt đều buộc mô hình chỉ dùng context. Phần dư thừa của V2 làm loãng nhẹ độ liên quan chứ không lạc đề.
+**Cách sửa và kết quả.** Bỏ mệnh lệnh tự đánh giá độ tin cậy, thay bằng ràng buộc bám nguồn rõ ràng
+(*"mỗi câu phải bám vào một dữ kiện có trong context: không thêm ví dụ, không khái quát hóa, không
+suy đoán"*), đồng thời giữ nguyên giọng chuyên gia và cấu trúc 3-5 câu để V2 vẫn khác V1 về phong
+cách. Kết quả: **V2 tăng 0.0856** (0.8669 → 0.9525). Ràng buộc tương tự thêm vào V1 cũng nâng nó
+**+0.0397** (0.9225 → 0.9622).
 
-**Kết luận thực tiễn:** với hệ RAG chấm theo faithfulness, prompt càng nhiều chỉ thị "trình bày đẹp" thì càng dễ mất điểm grounding. Muốn giữ giọng văn chuyên nghiệp của V2 mà không tụt faithfulness, nên tách yêu cầu định dạng ra khỏi yêu cầu nội dung — ví dụ bỏ mệnh lệnh "nêu mức độ chắc chắn" (thứ mô hình phải tự suy đoán, không có trong context) và giữ lại phần cấu trúc câu.
+**Vì sao V1 vẫn nhỉnh hơn?** Khoảng cách thu hẹp còn 0.0097 — gần như bằng nhau. Phần dư còn lại đến
+từ độ dài: V1 viết 2-4 câu, V2 viết 3-5 câu, mà mỗi câu thêm vào là một mệnh đề nữa phải được context
+chứng minh. Với cùng chất lượng grounding, câu trả lời ngắn hơn luôn có lợi thế nhỏ về faithfulness.
+
+**Kết luận thực tiễn:** trong hệ RAG chấm theo faithfulness, thủ phạm hạ điểm không phải là giọng văn
+hay độ dài, mà là những chỉ thị buộc mô hình **sinh nội dung nó phải tự nghĩ ra** — điển hình là yêu
+cầu tự đánh giá độ tin cậy. Tách yêu cầu định dạng khỏi yêu cầu nội dung, rồi thêm ràng buộc bám nguồn
+tường minh, là đủ để giữ phong cách mong muốn mà không mất điểm grounding.

@@ -44,12 +44,12 @@ xem [`evidence/01_langsmith_traces.png`](evidence/01_langsmith_traces.png) (ản
 | Hạng mục | Kết quả |
 |---|---|
 | Traces trên LangSmith | **300** root runs — 100 `rag-query` (Bước 1) + 200 `ab-rag-query` (Bước 2) |
-| Prompt versions trên Hub | 2 (`phohieuanh-rag-prompt-v1`, `phohieuanh-rag-prompt-v2`) |
+| Prompt versions trên Hub | 2 prompt, mỗi prompt 2 commit (bản đầu và bản tối ưu grounding) |
 | A/B routing | Tất định qua MD5(`request_id`) — phân bổ 19 câu V1 / 31 câu V2 |
-| RAGAS faithfulness | **V1 = 0.9225** · V2 = 0.8669 → đạt mục tiêu ≥ 0.8 |
-| RAGAS answer_relevancy | V1 = 0.9160 · V2 = 0.9016 |
+| RAGAS faithfulness | **V1 = 0.9622 · V2 = 0.9525** → cả hai ≥ 0.9 (đạt cả mục tiêu 0.8 và mốc điểm thưởng) |
+| RAGAS answer_relevancy | V1 = 0.9064 · V2 = 0.9011 |
 | RAGAS context_recall | V1 = 1.0000 · V2 = 1.0000 |
-| RAGAS context_precision | V1 = 0.9450 · V2 = 0.9450 |
+| RAGAS context_precision | V1 = 0.9417 · V2 = 0.9483 |
 | Guardrails | 6/6 test PII redact đúng · 5/5 test JSON (kể cả trường hợp fallback) |
 | Cấu hình chạy | OpenAI `gpt-4o-mini` + `text-embedding-3-small`, FAISS 107 chunks, retriever k=3 |
 
@@ -85,7 +85,7 @@ Phân tích chi tiết vì sao V1 cao điểm hơn V2: [`evidence/README.md`](ev
 | 3.1 50 QA × 2 version | [`evidence/03_ragas_console_log.txt`](evidence/03_ragas_console_log.txt) — 2 vòng `[01/50]…[50/50]` |
 | 3.2 `SingleTurnSample` đúng trường | [`src/03_ragas_evaluation.py#build_ragas_dataset`](src/03_ragas_evaluation.py) |
 | 3.3 Đủ 4 metrics | [`evidence/03_ragas_scores.png`](evidence/03_ragas_scores.png) · [`evidence/03_ragas_report.json`](evidence/03_ragas_report.json) |
-| 3.4 Faithfulness ≥ 0.8 | V1 = 0.9225 ✅ |
+| 3.4 Faithfulness ≥ 0.8 | V1 = 0.9622 · V2 = 0.9525 — cả hai ✅ |
 | 3.5 Lưu `ragas_report.json` | [`data/ragas_report.json`](data/ragas_report.json) (bản gốc) · [`evidence/03_ragas_report.json`](evidence/03_ragas_report.json) (bản nộp) |
 | Thưởng: phân tích V1 vs V2 | [`evidence/README.md`](evidence/README.md) · khối bình luận cuối [`src/03_ragas_evaluation.py`](src/03_ragas_evaluation.py) |
 
