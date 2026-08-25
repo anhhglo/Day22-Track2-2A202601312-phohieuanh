@@ -11,9 +11,24 @@
 | Mục | Đường dẫn | Truy cập |
 |---|---|---|
 | **GitHub repository** | https://github.com/anhhglo/Day22-Track2-2A202601312-phohieuanh | Public |
-| **LangSmith project** | [day22-2A202601312-phohieuanh](https://apac.smith.langchain.com/o/e877a741-b9e3-43d7-b2c0-118e447c6b10/projects/p/9583aecb-6391-443c-8e2d-61d0c754a951) | Cần đăng nhập workspace |
+| **LangSmith project** | [day22-2A202601312-phohieuanh](https://apac.smith.langchain.com/o/e877a741-b9e3-43d7-b2c0-118e447c6b10/projects/p/9583aecb-6391-443c-8e2d-61d0c754a951) | Cần đăng nhập workspace — xem [trace public](#trace-công-khai-không-cần-đăng-nhập) bên dưới |
 | **Prompt Hub — V1** | https://apac.smith.langchain.com/hub/phohieuanh/phohieuanh-rag-prompt-v1 | Public, không cần đăng nhập |
 | **Prompt Hub — V2** | https://apac.smith.langchain.com/hub/phohieuanh/phohieuanh-rag-prompt-v2 | Public, không cần đăng nhập |
+
+### Trace công khai (không cần đăng nhập)
+
+Ba trace tiêu biểu đã được share public để người chấm xem trực tiếp cấu trúc chain,
+context được truy xuất và câu trả lời:
+
+| Trace | Câu hỏi | Link |
+|---|---|---|
+| Bước 1 — `rag-query` | *What information do LangSmith traces capture?* | https://apac.smith.langchain.com/public/275a334b-553b-405b-ba13-98be7d400a25/r |
+| Bước 2 — `ab-rag-query` (prompt **v1**) | *What is the transformer architecture?* | https://apac.smith.langchain.com/public/5d191f9a-4366-4802-8f7f-5753be915b00/r |
+| Bước 2 — `ab-rag-query` (prompt **v2**) | *How does LangSmith help monitor production LLM applications?* | https://apac.smith.langchain.com/public/5bd43afb-21f4-4cf8-9e12-178045ac88a5/r |
+
+Mở trace Bước 1 sẽ thấy đầy đủ chuỗi run con: `VectorStoreRetriever` (3 documents) →
+`ChatPromptTemplate` → `ChatOpenAI` → `StrOutputParser` — tức trace chứa cả câu hỏi,
+context truy xuất được và câu trả lời (tiêu chí 1.4).
 
 > ⚠️ **Lưu ý về region:** workspace nằm ở **APAC**. Mọi đường dẫn phải dùng host `apac.smith.langchain.com`;
 > host mặc định `smith.langchain.com` sẽ trả **404** (với prompt) hoặc **403** (với API) dù link hoàn toàn đúng.

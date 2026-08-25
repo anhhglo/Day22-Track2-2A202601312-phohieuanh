@@ -26,6 +26,11 @@
 | `04_pii_demo_log.txt` | 6 test case PII detection & redaction |
 | `04_json_demo_log.txt` | 5 test case JSON repair |
 
+**Trace public (không cần đăng nhập):**
+- Bước 1 `rag-query` — https://apac.smith.langchain.com/public/275a334b-553b-405b-ba13-98be7d400a25/r
+- Bước 2 `ab-rag-query` v1 — https://apac.smith.langchain.com/public/5d191f9a-4366-4802-8f7f-5753be915b00/r
+- Bước 2 `ab-rag-query` v2 — https://apac.smith.langchain.com/public/5bd43afb-21f4-4cf8-9e12-178045ac88a5/r
+
 **Prompt Hub URLs** (đã chuyển sang public, handle `phohieuanh`):
 - V1 — https://apac.smith.langchain.com/hub/phohieuanh/phohieuanh-rag-prompt-v1
 - V2 — https://apac.smith.langchain.com/hub/phohieuanh/phohieuanh-rag-prompt-v2
